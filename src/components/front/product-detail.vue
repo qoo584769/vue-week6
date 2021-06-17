@@ -29,7 +29,7 @@
               <td class="">
                 <input type="number" min=1 v-model.number="CartData.data.qty">
                 <button class="btn btn-primary"
-                  @click.prevent="UpdateCart(ProductDetail.data.id)">加入購物車</button>
+                  @click.prevent="AddCart(ProductDetail.data.id)">加入購物車</button>
               </td>
             </tr>
           </tbody>
@@ -77,15 +77,13 @@ export default {
         alert(err.message);
       });
     };
-      // 更新購物車
-    const UpdateCart = (id) => {
+      // 加入購物車
+    const AddCart = (id) => {
       CartData.data.product_id = id;
-      console.log(CartData.data);
-      axios.put(`${process.env.VUE_APP_ALL_APIPATH}/cart/${id}`, CartData).then((res) => {
+      axios.post(`${process.env.VUE_APP_ALL_APIPATH}/cart/`, CartData).then((res) => {
         if (res.data.success) {
           alert(res.data.message);
         } else {
-          console.log(res);
           alert(res.data.message);
         }
       }).catch((err) => {
@@ -98,7 +96,7 @@ export default {
     return {
       ProductDetail,
       CartData,
-      UpdateCart,
+      AddCart,
     };
   },
 

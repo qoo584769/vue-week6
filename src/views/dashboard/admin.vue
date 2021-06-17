@@ -2,7 +2,7 @@
   <div>
     後台
     <router-link :to="{name:'product-list'}" class="btn btn-primary m-2">後台產品列表</router-link>
-    <router-link :to="{name:'order'}" class="btn btn-primary m-2">後台訂單</router-link>
+    <router-link :to="{name:'AdminOrder'}" class="btn btn-primary m-2">後台訂單</router-link>
     <router-view></router-view>
   </div>
 </template>

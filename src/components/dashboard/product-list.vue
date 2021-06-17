@@ -41,7 +41,7 @@ import {
   onMounted,
   reactive,
 } from '@vue/runtime-core';
-import pagenation from '../common/pagination.vue';
+import pagenation from '@/components/common/pagination.vue';
 
 export default {
   components: {

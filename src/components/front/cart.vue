@@ -91,7 +91,7 @@ export default {
     };
     // 跳轉到訂單頁面
     const PushToOrder = () => {
-      router.push({ name: 'order' });
+      router.push({ name: 'CustomerOrder' });
     };
     onMounted(() => {
       GetCartList();

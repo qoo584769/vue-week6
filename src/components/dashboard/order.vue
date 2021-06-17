@@ -38,7 +38,7 @@ import {
 import {
   onMounted,
 } from '@vue/runtime-core';
-import pagenation from '../common/pagination.vue';
+import pagenation from '@/components/common/pagination.vue';
 
 export default {
   components: {
@@ -59,10 +59,8 @@ export default {
         res,
       ) => {
         if (res.data.success) {
-          console.log(res);
           AdminOrderList.data = res.data.orders;
           AdminOrderPagination.data = res.data.pagination;
-          console.log(AdminOrderList.data);
         } else {
           alert(res.data.message);
         }

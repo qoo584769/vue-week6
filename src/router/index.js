@@ -25,7 +25,7 @@ const routes = [
       },
       {
         path: 'order',
-        name: 'order',
+        name: 'CustomerOrder',
         component: () => import('../components/front/order.vue'),
       },
     ],
@@ -42,7 +42,7 @@ const routes = [
       },
       {
         path: 'order',
-        name: 'order',
+        name: 'AdminOrder',
         component: () => import('../components/dashboard/order.vue'),
       },
     ],
