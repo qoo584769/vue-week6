@@ -2,11 +2,24 @@
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <!-- <Index></Index> -->
   </div>
   <router-view/>
 </template>
 
+<script>
+// import Index from '@/views/front/index.vue';
+
+export default {
+  components: {
+    // Index,
+  },
+};
+</script>
+
 <style lang="scss">
+@import '~bootstrap';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

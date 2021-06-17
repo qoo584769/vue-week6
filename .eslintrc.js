@@ -13,5 +13,9 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'max-len':["error", { "code": 300 }],
+    // "import/extensions": [0, "never", { "web.js": "never", "json": "never" }],
+    "import/no-extraneous-dependencies": [0, { "devDependencies": true }],
+    "import/no-unresolved": [0, {'caseSensitive': false}],
   },
 };
