@@ -40,7 +40,8 @@ export default {
                 expired,
               } = res.data;
               document.cookie = `henToken=${token};expires=${new Date(expired)}`;
-              router.push({ name: 'product-list' });
+              console.log(document.cookie);
+              router.push({ name: 'Admin' });
             } else {
               alert(`${res.data.message}`);
             }

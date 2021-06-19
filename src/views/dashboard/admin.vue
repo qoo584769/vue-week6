@@ -22,14 +22,17 @@ export default {
         /(?:(?:^|.*;\s*)henToken\s*\=\s*([^;]*).*$)|^.*$/,
         '$1',
       );
-
+      console.log(token);
       axios.defaults.headers.common.Authorization = token;
       axios.post(`${process.env.VUE_APP_APIPATH}/api/user/check`).then((res) => {
         if (res.data.success) {
           router.push({ name: 'product-list' });
         } else {
+          alert(res.data.message);
           router.push({ name: 'login' });
         }
+      }).catch((err) => {
+        alert(err.message);
       });
     };
     onMounted(() => {

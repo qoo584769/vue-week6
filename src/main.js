@@ -19,9 +19,6 @@ import { localize, setLocale } from '@vee-validate/i18n';
 // 匯入繁體中文語系檔案
 
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json';
-
-import '@/assets/all.scss';
-
 import router from './router';
 import App from './App.vue';
 
